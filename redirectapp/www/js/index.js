@@ -20,6 +20,9 @@ var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+        window.handleOpenUrl = function(url){
+          document.addEventListener('deviceready', this.redirectToURL(url), false);
+        };
     },
 
     // deviceready Event Handler
@@ -28,6 +31,10 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+    },
+
+    redirectToURL: function(url) {
+      window.open(url, '_system');
     },
 
     // Update DOM on a Received Event
