@@ -1,2 +1,7 @@
 schemetest/platforms
 schemetest/plugins
+
+redirectapp/platforms
+redirectapp/plugins
+
+*node_modules
